@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Beans Stock & Sales</title>
+  <style>
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 4px; }
+    table { width: 100%; margin-bottom: 20px; }
+    form { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Stok Green Beans</h2>
+  <table id="tabel-green"><thead><tr><th>Nama</th><th>Jumlah</th></tr></thead><tbody></tbody></table>
+
+  <h2>Stok Roasted Beans</h2>
+  <table id="tabel-stok"><thead><tr><th>Nama</th><th>Jumlah</th></tr></thead><tbody></tbody></table>
+
+  <h2>Stok Display (per pcs)</h2>
+  <table id="tabel-display"><thead><tr><th>Nama</th><th>Jumlah</th></tr></thead><tbody></tbody></table>
+
+  <h3>Form Roasting</h3>
+  <form id="form-roasting">
+    <select id="greenBean"></select>
+    <input type="number" id="jumlahRoast" placeholder="Jumlah gram" required/>
+    <button>Proses Roasting</button>
+  </form>
+
+  <h3>Tambah ke Display</h3>
+  <form id="form-display">
+    <select id="produkDisplay"></select>
+    <input type="number" id="jumlahDisplay" placeholder="Jumlah pcs" required/>
+    <button>Tambah Display</button>
+  </form>
+
+  <h3>Penjualan</h3>
+  <form id="form-penjualan">
+    <input type="text" id="namaPembeli" placeholder="Nama Pembeli" required />
+    <input type="text" id="alamatPembeli" placeholder="Alamat" required />
+    <select id="produkJual"></select>
+    <input type="number" id="jumlahJual" placeholder="Jumlah pcs" required/>
+    <input type="number" id="hargaJual" placeholder="Harga total (Rp)" required/>
+    <button>Catat Penjualan</button>
+  </form>
+
+  <h2>Rekap Penjualan Hari Ini</h2>
+  <table id="tabel-penjualan">
+    <thead><tr><th>Tanggal</th><th>Pembeli</th><th>Alamat</th><th>Produk</th><th>Qty</th><th>Harga</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Grafik Produk Terlaris</h2>
+  <ul id="grafik-terlaris"></ul>
+
+  <h2>Roast Log</h2>
+  <table id="tabel-log">
+    <thead><tr><th>Tanggal</th><th>Nama</th><th>Input</th><th>Output</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
